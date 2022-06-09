@@ -1,66 +1,105 @@
 * {
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     margin: 0;
     padding: 0;
-  }
-  
-  .toolbox-cont {
+}
+
+.toolbox-cont {
     height: 5rem;
-    background-color: grey;
+    background-color: #4b4b4b;
     display: flex;
     align-items: center;
-  }
-  
-  .toolbox-cont > * {
+}
+
+.toolbox-cont>* {
     margin-left: 4rem;
-  }
-  
-  .toolbox-priority-cont {
+}
+
+.toolbox-priority-cont {
     height: 3.5rem;
     width: 18rem;
-    background-color: yellow;
+    background-color: #3d3d3d;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-  }
+}
 
-  .action_button{
-      height:3.5rem;
-      width: 5rem;
-      background-color: yellow;
-      display:flex;
-    }
+.action_button {
+    height: 3.5rem;
+    width: 5rem;
+    background-color: #3d3d3d;
+    display: flex;
+    color: white;
+}
 
-    .action_button>*{
-        display: flex;
-        justify-content: center;
-        width: 50%;
-        font-size: 2rem;
-        align-items: center;
- 
- }
+.action_button>* {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    font-size: 2rem;
+    align-items: center;
+}
 
 
-  .color {
+.color {
     height: 1.5rem;
     width: 3rem;
-  }
-  
-  .light_pink {
+}
+
+.light_pink {
     background-color: lightpink;
-  }
-  
-  .light_green {
+}
+
+.light_green {
     background-color: lightgreen;
-  }
-  
-  .light_blue {
+}
+
+.light_blue {
     background-color: lightblue;
-  }
-  
-  .black {
+}
+
+.black {
     background-color: black;
-  }
+}
+
+.modal-container {
+    height: 50vh;
+    width: 50vw;
+    background-color: skyblue;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    display: flex;
+}
+
+.textArea-container {
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 75%;
+    background-color: #dfe4ea;
+    resize: none;
+    font-size: 2rem;
+    padding: 2rem;
+    
+
+
+}
+
+.priority-colorArea {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #4b4b4b;
+}
+
+.priority-color {
+    height: 3rem;
+    width: 5rem;
+}
