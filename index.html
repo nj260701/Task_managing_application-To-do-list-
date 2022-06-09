@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,47 @@
     , initial-scale=1.0">
     <title>Ticket Management App</title>
 
-    <link rel = "stylesheet" href="./style.css"> 
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    
+
     <!-- Tool Box Container-->
-    <div class="toolbox-cont" >
+    <div class="toolbox-cont">
         <div class="toolbox-priority-cont">
-            <div class = "light_pink color"></div>
-            <div class = "light_green color"></div>
-            <div class = "light_blue color"></div>
-            <div class = "black color"></div>
+            <div class="light_pink color"></div>
+            <div class="light_green color"></div>
+            <div class="light_blue color"></div>
+            <div class="black color"></div>
         </div>
-    </div> 
-    
+
+
+        <div class="action_button">
+            <div class="add">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="remove">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal box for Task input -->
+    <div class = "modal-container">
+            <textarea class="textArea-container">
+                
+            </textarea>
+            <div class="colorArea">
+
+            </div>
+    </div>
+
+
 
 
 </body>
+
 </html>

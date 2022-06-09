@@ -26,7 +26,24 @@
     align-items: center;
     justify-content: space-evenly;
   }
-  
+
+  .action_button{
+      height:3.5rem;
+      width: 5rem;
+      background-color: yellow;
+      display:flex;
+    }
+
+    .action_button>*{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        font-size: 2rem;
+        align-items: center;
+ 
+ }
+
+
   .color {
     height: 1.5rem;
     width: 3rem;
