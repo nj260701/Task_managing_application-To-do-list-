@@ -107,24 +107,25 @@ body {
 .main-cont {
     display: flex;
     gap: 2rem;
-    justify-content:center;
-    padding:2rem;
-    flex-wrap:wrap;
+    justify-content: center;
+    padding: 2rem;
+    flex-wrap: wrap;
 }
 
 .ticket-cont {
     height: 12rem;
     width: 15rem;
     background-color: coral;
-    border-radius:2rem;
+    border-radius: 2rem;
 }
 
 .ticket-color {
-    height:1rem;
+    height: 1rem;
     background-color: black;
+    border-radius: 1rem;
 }
 
-.ticket-id{
-    height:2rem;
+.ticket-id {
+    height: 2rem;
     background-color: yellow;
-} 
+}
