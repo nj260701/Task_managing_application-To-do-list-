@@ -84,7 +84,7 @@ body {
     resize: none;
     font-size: 2rem;
     padding: 2rem;
-    
+
 
 
 }
@@ -103,3 +103,28 @@ body {
     height: 3rem;
     width: 5rem;
 }
+
+.main-cont {
+    display: flex;
+    gap: 2rem;
+    justify-content:center;
+    padding:2rem;
+    flex-wrap:wrap;
+}
+
+.ticket-cont {
+    height: 12rem;
+    width: 15rem;
+    background-color: coral;
+    border-radius:2rem;
+}
+
+.ticket-color {
+    height:1rem;
+    background-color: black;
+}
+
+.ticket-id{
+    height:2rem;
+    background-color: yellow;
+} 
