@@ -29,7 +29,7 @@ body {
 
 .action_button {
     height: 3.5rem;
-    width: 5rem;
+    width: 7rem;
     background-color: #3d3d3d;
     display: flex;
     color: white;
@@ -128,4 +128,24 @@ body {
 .ticket-id {
     height: 2rem;
     background-color: yellow;
+}
+
+.ticket-lock{
+    display:flex;
+    font-size:1.5rem;
+    justify-content: flex-end;
+    margin-top:5.8rem;
+    margin-right:1rem;
+}
+
+.add:hover{
+    background-color: #4bb543;
+}
+
+.remove:hover{
+    background-color: #f70d1a; ;
+}
+
+.toolbox-priority-cont>*:hover{
+    background-color: #485460;
 }
