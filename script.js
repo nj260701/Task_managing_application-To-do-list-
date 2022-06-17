@@ -4,6 +4,10 @@ let mainContainer = document.querySelector('.main-cont')
 let taskArea = document.querySelector('.textArea-container')
 let removeButton = document.querySelector('.remove')
 
+let colors = ['lightpink' , 'lightgreen', 'lightblue', 'black']
+let allPriorityColor = document.querySelectorAll('.priority-color')
+let modalPriorityColor = colors[colors.length-1]
+
 // modalContainer.style.display = "none"
 
 let addFlag =false;
@@ -24,11 +28,25 @@ addButton.addEventListener('click', function(){
     }
 })
 
+//Select the priority color of the task
+
+allPriorityColor.forEach(function(colorElement){
+    colorElement.addEventListener('click', function(e){
+        allPriorityColor.forEach(function(priorityColorElement){
+            priorityColorElement.classList.remove('active')
+        })
+        colorElement.classList.add('active')
+
+        modalPriorityColor = colorElement.classList[0] //lightpink
+    })
+})
+
+
 modalContainer.addEventListener("keydown", function(e){
     let key= e.key
 
     if(key=='Shift'){
-        createTicket(taskArea.value)
+        createTicket(taskArea.value , modalPriorityColor)
         modalContainer.style.display = 'none'
         addFlag=false
         taskArea.value=''
@@ -36,13 +54,13 @@ modalContainer.addEventListener("keydown", function(e){
 })
 
 
-function createTicket(ticketTask){
+function createTicket(ticketTask ,ticketColor){
     // let id = shortid()
     let tickerContainer = document.createElement('div')
     tickerContainer.setAttribute('class','ticket-cont')
 
     tickerContainer.innerHTML = `
-    <div class="ticket-color"></div>
+    <div class="ticket-color ${ticketColor}"></div>
             <div class="ticket-id">id1</div>
             <div class="task-area">${ticketTask}</div>
             <div class="ticket-lock">
@@ -53,6 +71,8 @@ function createTicket(ticketTask){
     handleRemoval(tickerContainer);
 
 }
+
+
 
 removeButton.addEventListener('click' ,function(){
     removeFlag= !removeFlag
