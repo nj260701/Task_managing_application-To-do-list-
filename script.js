@@ -2,11 +2,13 @@ let addButton = document.querySelector(".add");
 let modalContainer= document.querySelector(".modal-container")
 let mainContainer = document.querySelector('.main-cont')
 let taskArea = document.querySelector('.textArea-container')
-
+let removeButton = document.querySelector('.remove')
 
 // modalContainer.style.display = "none"
 
 let addFlag =false;
+let removeFlag = false;
+
 addButton.addEventListener('click', function(){
     // console.log('button is clicked');
 
@@ -48,6 +50,25 @@ function createTicket(ticketTask){
             </div>`
 
     mainContainer.append(tickerContainer)
+    handleRemoval(tickerContainer);
 
+}
+
+removeButton.addEventListener('click' ,function(){
+    removeFlag= !removeFlag
+
+    if(removeFlag == true){
+        removeButton.style.color = 'red'
+    }else{
+        removeButton.style.color = 'white';
+    }
+})
+
+
+function handleRemoval(ticket){
+    ticket.addEventListener('click',function(){
+        if(!removeFlag) return;
+        ticket.remove(); //ui Remove
+    })
 }
 
