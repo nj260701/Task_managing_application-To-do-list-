@@ -13,6 +13,9 @@ let modalPriorityColor = colors[colors.length-1]
 let addFlag =false;
 let removeFlag = false;
 
+let lockClass = "fa-lock";
+let unlockClass = "fa-lock-open";
+
 addButton.addEventListener('click', function(){
     // console.log('button is clicked');
 
@@ -69,6 +72,7 @@ function createTicket(ticketTask ,ticketColor){
 
     mainContainer.append(tickerContainer)
     handleRemoval(tickerContainer);
+    handleLock(tickerContainer)
 
 }
 
@@ -92,3 +96,20 @@ function handleRemoval(ticket){
     })
 }
 
+function handleLock(ticket){
+    let ticketLockElement = ticket.querySelector('.ticket-lock')
+    let ticketLockIcon = ticketLockElement.children[0]
+    let ticketTaskArea = ticket.querySelector('.task-area')
+
+    ticketLockIcon.addEventListener('click', function(){
+        if(ticketLockIcon.classList.contains(lockClass)){
+            ticketLockIcon.classList.remove(lockClass)
+            ticketLockIcon.classList.add(unlockClass)
+            ticketTaskArea.setAttribute('contenteditable', true)
+        }else{
+            ticketLockIcon.classList.remove(unlockClass)
+            ticketLockIcon.classList.add(lockClass)
+            ticketTaskArea.setAttribute('contenteditable', false)
+        }
+    })
+}
