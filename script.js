@@ -72,7 +72,8 @@ function createTicket(ticketTask ,ticketColor){
 
     mainContainer.append(tickerContainer)
     handleRemoval(tickerContainer);
-    handleLock(tickerContainer)
+    handleLock(tickerContainer);
+    handleColor(tickerContainer);
 
 }
 
@@ -111,5 +112,24 @@ function handleLock(ticket){
             ticketLockIcon.classList.add(lockClass)
             ticketTaskArea.setAttribute('contenteditable', false)
         }
+    })
+}
+
+function handleColor(ticket){
+    let ticketColorBand = ticket.querySelector('.ticket-color')
+
+    ticketColorBand.addEventListener('click', function(){
+        let currentTicketColor = ticketColorBand.classList[1]
+
+        let currentColorIndex = colors.findIndex(function(color){
+            return currentTicketColor===color
+        })
+
+        currentColorIndex++
+        let newTicketColorIndex = currentColorIndex %colors.length
+        let newTicketColor = colors[newTicketColorIndex]
+
+        ticketColorBand.classList.remove(currentTicketColor)
+        ticketColorBand.classList.add(newTicketColor)
     })
 }
